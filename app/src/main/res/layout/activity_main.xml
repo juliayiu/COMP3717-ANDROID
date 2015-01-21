@@ -8,7 +8,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NewButton"
+        android:text="@string/bottom_button_name"
         android:id="@+id/button"
         android:onClick="bottomPressed"
         android:layout_alignParentBottom="true"
