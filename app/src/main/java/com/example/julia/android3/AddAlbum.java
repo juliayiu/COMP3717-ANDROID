@@ -14,17 +14,6 @@ public class AddAlbum extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_album);
-
-        Button nextButton = (Button) findViewById(R.id.button2);
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-
-        });
     }
 
 

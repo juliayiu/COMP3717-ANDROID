@@ -11,10 +11,11 @@
         android:layout_height="200dp"
         android:src="@drawable/groot"
         android:id="@+id/blankAlbum"
-        android:onClick="albumPressed"
+        android:onClick="nextActivity"
         android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:clickable="true" />
 
 
     <ImageButton
