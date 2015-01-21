@@ -40,6 +40,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void foo(final View view){
-        Toast.makeText(getApplication(), "julia was here", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplication(), "julia was fart", Toast.LENGTH_LONG).show();
     }
 }
