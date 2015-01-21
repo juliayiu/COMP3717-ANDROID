@@ -35,7 +35,6 @@ public class MainActivity extends ActionBarActivity {
         SearchView searchView =
                 (SearchView) menu.findItem(R.id.search).getActionView();
 
-
         return true;
     }
 
@@ -75,15 +74,15 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    public void foo(final View view){
-        Toast.makeText(getApplication(), "jay was fart", Toast.LENGTH_LONG).show();
-    }
-
     public void albumPressed(final View view){
-        Toast.makeText(getApplication(), "Yiu pressed on an album", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplication(), "Yiu pressed on an album", Toast.LENGTH_SHORT).show();
     }
 
     public void bottomPressed(final View view){
-        Toast.makeText(getApplication(), "Thanks for pressing me!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplication(), "Thanks for pressing me!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void newAlbum(final View view){
+        Toast.makeText(getApplication(), "Add an Album!", Toast.LENGTH_SHORT).show();
     }
 }
