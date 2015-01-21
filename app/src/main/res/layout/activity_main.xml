@@ -5,29 +5,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bottom_button_name"
-        android:id="@+id/button"
-        android:onClick="bottomPressed"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/def"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/groot"
         android:id="@+id/blankAlbum"
-        android:onClick="albumPressed"
+        android:onClick="nextActivity"
         android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:clickable="true" />
+
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/def"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/groot"
         android:id="@+id/imageButton"
         android:onClick="albumPressed"
         android:scaleType="centerCrop"
@@ -35,9 +29,9 @@
         android:layout_toEndOf="@+id/blankAlbum" />
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/def"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/groot"
         android:id="@+id/imageButton2"
         android:onClick="albumPressed"
         android:scaleType="centerCrop"
@@ -45,9 +39,9 @@
         android:layout_alignParentStart="true" />
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/def"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/groot"
         android:id="@+id/imageButton3"
         android:onClick="albumPressed"
         android:scaleType="centerCrop"
@@ -55,9 +49,9 @@
         android:layout_toEndOf="@+id/imageButton2" />
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/def"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/groot"
         android:id="@+id/imageButton4"
         android:onClick="albumPressed"
         android:scaleType="centerCrop"

@@ -21,6 +21,11 @@
                 android:resource="@xml/searchable" />
         </activity>
 
+        <activity
+            android:name=".AddAlbum"
+            android:label="@string/action_add_album" >
+        </activity>
+
     </application>
 
 </manifest>
