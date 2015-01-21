@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class AddAlbum extends ActionBarActivity {
@@ -37,5 +38,9 @@ public class AddAlbum extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void popUp(final View view){
+        Toast.makeText(getApplication(), "Click Back to Get to Homepage!", Toast.LENGTH_SHORT).show();
     }
 }

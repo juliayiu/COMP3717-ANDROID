@@ -10,8 +10,8 @@
 
 
             <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/blankAlbum"
                 android:onClick="nextActivity"
@@ -22,41 +22,41 @@
 
 
             <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/imageButton"
-                android:onClick="albumPressed"
+                android:onClick="nextActivity"
                 android:scaleType="centerCrop"
                 android:layout_alignTop="@+id/blankAlbum"
                 android:layout_toEndOf="@+id/blankAlbum" />
 
             <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/imageButton2"
-                android:onClick="albumPressed"
+                android:onClick="nextActivity"
                 android:scaleType="centerCrop"
                 android:layout_below="@+id/blankAlbum"
                 android:layout_alignParentStart="true" />
 
             <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/imageButton3"
-                android:onClick="albumPressed"
+                android:onClick="nextActivity"
                 android:scaleType="centerCrop"
                 android:layout_below="@+id/blankAlbum"
                 android:layout_toEndOf="@+id/imageButton2" />
 
             <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/imageButton4"
-                android:onClick="albumPressed"
+                android:onClick="nextActivity"
                 android:scaleType="centerCrop"
                 android:layout_below="@+id/imageButton2"
                 android:layout_alignParentStart="true" />
