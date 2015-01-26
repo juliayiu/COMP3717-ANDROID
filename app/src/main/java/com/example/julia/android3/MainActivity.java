@@ -3,6 +3,7 @@ package com.example.julia.android3;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -21,19 +22,34 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        handleIntent(getIntent());
+    }
+
+    protected void onNewIntent(Intent intent){
+        handleIntent(intent);
+    }
+    private void handleIntent(Intent intent) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            //use the query to search your data somehow
+        }
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
 
         // Associate searchable configuration with the SearchView
         SearchManager searchManager =
                 (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView =
                 (SearchView) menu.findItem(R.id.search).getActionView();
+        //searchView.setSearchableInfo(
+          //      searchManager.getSearchableInfo(getComponentName()));
 
         return true;
     }
@@ -50,28 +66,15 @@ public class MainActivity extends ActionBarActivity {
         //    return true;
         //}
 
+        // When Add Album action menu item is clicked
+        if (id == R.id.addalbum){
+            // Create Intent for Adding Activity
+            Intent addAlbIntent = new Intent (this, AddAlbum.class);
+            // Start Add Album Activity
+            startActivity(addAlbIntent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
-    }
-
-    public class SearchResultsActivity extends Activity {
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            handleIntent(getIntent());
-        }
-
-        @Override
-        protected void onNewIntent(Intent intent) {
-            handleIntent(intent);
-        }
-
-        private void handleIntent(Intent intent) {
-
-            if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-                String query = intent.getStringExtra(SearchManager.QUERY);
-                //use the query to search your data somehow
-            }
-        }
     }
 
     public void albumPressed(final View view){
