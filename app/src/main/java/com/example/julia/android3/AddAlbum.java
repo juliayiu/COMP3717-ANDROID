@@ -80,6 +80,11 @@ public class AddAlbum extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void Camera(final View view){
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        startActivity(intent);
+    }
+
     public void popUp(final View view){
         Toast.makeText(getApplication(), "Click Back to Get to Homepage!", Toast.LENGTH_SHORT).show();
     }
