@@ -85,6 +85,12 @@ public class AddAlbum extends ActionBarActivity {
         startActivity(intent);
     }
 
+    // Intent to Album Page
+    public void nextActivity(final View view) {
+        Intent intent = new Intent(AddAlbum.this, MainActivity.class);
+        startActivity(intent);
+    }
+
     public void popUp(final View view){
         Toast.makeText(getApplication(), "Click Back to Get to Homepage!", Toast.LENGTH_SHORT).show();
     }
