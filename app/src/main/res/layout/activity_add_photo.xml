@@ -101,6 +101,7 @@
         android:textColor="#ff000000"
         android:background="#d018b3ff" />
 
+
     <ImageView
         android:layout_width="125dp"
         android:layout_height="125dp"
