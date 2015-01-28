@@ -44,7 +44,8 @@
         android:layout_alignTop="@+id/addPhotoIBGallery"
         android:layout_alignEnd="@+id/photoTitleInput"
         android:layout_marginEnd="22dp"
-        android:background="#d018b3ff" />
+        android:background="#d018b3ff"
+        android:onClick="Camera"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -113,6 +114,7 @@
         android:layout_marginBottom="72dp"
         android:layout_above="@+id/addPhotoDesc"
         android:layout_toStartOf="@+id/photoTitleInput"
-        android:background="#d018b3ff" />
+        android:background="#d018b3ff"
+        android:onClick="nextActivity"/>
 
 </RelativeLayout>

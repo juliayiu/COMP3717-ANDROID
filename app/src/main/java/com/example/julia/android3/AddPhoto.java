@@ -27,7 +27,7 @@ public class AddPhoto extends ActionBarActivity {
         setContentView(R.layout.activity_add_photo);
         img =(ImageView)findViewById(R.id.ImageView01);
 
-        ((Button)findViewById(R.id.button)).setOnClickListener(new View.OnClickListener() {
+        ((ImageView)findViewById(R.id.addPhotoIBGallery)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
