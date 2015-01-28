@@ -90,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void nextActivity(final View view) {
-        Intent intent = new Intent(MainActivity.this, AddAlbum.class);
+        Intent intent = new Intent(MainActivity.this, AddPhoto.class);
         startActivity(intent);
     }
 }

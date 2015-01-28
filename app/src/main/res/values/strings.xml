@@ -8,5 +8,7 @@
     <string name="action_add_album">Add Album</string>
     <string name="bottom_button_name">Press Me!</string>
     <string name="text">test!</string>
+    <string name="title_activity_add_photo">AddPhoto</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
