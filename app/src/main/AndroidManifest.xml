@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.julia.android3" >
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -12,8 +16,11 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
+
                 <action android:name="android.intent.action.SEARCH" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -21,16 +28,14 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-
         <activity
             android:name=".AddAlbum"
             android:label="@string/action_add_album" >
         </activity>
-
+        <activity
+            android:name=".AddPhoto"
+            android:label="@string/title_activity_add_photo" >
+        </activity>
     </application>
-
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
 
 </manifest>

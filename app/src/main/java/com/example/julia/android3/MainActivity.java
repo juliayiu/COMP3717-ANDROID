@@ -89,8 +89,8 @@ public class MainActivity extends ActionBarActivity {
         Toast.makeText(getApplication(), "Add an Album!", Toast.LENGTH_SHORT).show();
     }
 
-    public void nextActivity(final View view) {
-        Intent intent = new Intent(MainActivity.this, AddAlbum.class);
+    public void Albums(final View view) {
+        Intent intent = new Intent(MainActivity.this, AddPhoto.class);
         startActivity(intent);
     }
 }
