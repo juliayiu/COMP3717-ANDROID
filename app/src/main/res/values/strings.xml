@@ -10,5 +10,6 @@
     <string name="text">test!</string>
     <string name="title_activity_add_photo">AddPhoto</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_album_details">AlbumDetails</string>
 
 </resources>

@@ -93,4 +93,9 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(MainActivity.this, AddPhoto.class);
         startActivity(intent);
     }
+
+    public void albumDetails(final View view) {
+        Intent intent = new Intent(MainActivity.this, AlbumDetails.class);
+        startActivity(intent);
+    }
 }

@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
+import android.view.View;
 
 
 public class AlbumDetails extends ActionBarActivity {
@@ -12,6 +14,8 @@ public class AlbumDetails extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album_details);
+
+        //handleIntent(getIntent());
     }
 
 
@@ -36,4 +40,10 @@ public class AlbumDetails extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void nextActivity(final View view) {
+        Intent intent = new Intent(AlbumDetails.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

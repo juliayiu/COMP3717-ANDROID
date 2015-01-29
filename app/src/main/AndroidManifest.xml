@@ -36,6 +36,10 @@
             android:name=".AddPhoto"
             android:label="@string/title_activity_add_photo" >
         </activity>
+        <activity
+            android:name=".AlbumDetails"
+            android:label="@string/title_activity_album_details" >
+        </activity>
     </application>
 
 </manifest>
