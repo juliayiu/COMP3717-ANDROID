@@ -2,9 +2,5 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context="com.example.julia.android3.AddAlbum">
 
-    <item android:id="@+id/search"
-        android:title="@string/action_search"
-        android:icon="@drawable/ic_action_search"
-        app:showAsAction="always"
-        android:actionViewClass="android.widget.SearchView" />
+
 </menu>
