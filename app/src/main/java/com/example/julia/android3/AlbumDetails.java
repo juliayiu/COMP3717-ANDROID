@@ -18,7 +18,6 @@ public class AlbumDetails extends ActionBarActivity {
         //handleIntent(getIntent());
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -33,12 +32,15 @@ public class AlbumDetails extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        /*
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        // When Add Album action menu item is clicked
+        if (id == R.id.addalbum){
+            // Create Intent for Adding Activity
+            Intent addAlbIntent = new Intent (this, AddPhoto.class);
+            // Start Add Album Activity
+            startActivity(addAlbIntent);
             return true;
         }
-        */
+
         return super.onOptionsItemSelected(item);
     }
 

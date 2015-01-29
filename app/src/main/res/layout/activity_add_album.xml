@@ -48,16 +48,15 @@
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/addPhotoDescInput"
         android:lines="1"
         android:maxLength="150"
-        android:layout_marginTop="45dp"
         android:layout_alignTop="@+id/addPhotoDesc"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/photoTitle" />
 
     <Button
         android:layout_width="wrap_content"
@@ -81,9 +80,8 @@
         android:layout_height="wrap_content"
         android:text="Add Album"
         android:id="@+id/addPhotoSubmit"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/addPhotoDescInput"
-        android:layout_toEndOf="@+id/button2"
-        android:onClick="nextActivity"/>
+        android:onClick="nextActivity"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
