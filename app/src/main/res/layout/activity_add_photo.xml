@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:text="Add Photo"
         android:id="@+id/addPhotoSubmit"
-        android:onClick="nextActivity"
+        android:onClick="homepage"
         android:layout_column="1"
         android:layout_row="24"
         android:layout_gravity="center_horizontal"

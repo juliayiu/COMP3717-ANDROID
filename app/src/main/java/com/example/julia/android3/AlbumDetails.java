@@ -44,7 +44,7 @@ public class AlbumDetails extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void nextActivity(final View view) {
+    public void homepage(final View view) {
         Intent intent = new Intent(AlbumDetails.this, MainActivity.class);
         startActivity(intent);
     }
