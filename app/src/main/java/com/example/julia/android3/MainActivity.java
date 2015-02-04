@@ -7,6 +7,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -25,6 +28,12 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         handleIntent(getIntent());
+
+        // GridView Settings
+        GridView gridView = (GridView) findViewById(R.id.gridview);
+
+        // Instance of ImageAdapter Class
+        gridView.setAdapter(new ImageAdapter_mgv(this));
     }
 
     protected void onNewIntent(Intent intent) {
