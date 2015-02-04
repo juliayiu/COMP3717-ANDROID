@@ -21,13 +21,11 @@
             android:id="@+id/picture1"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="0"
             android:layout_column="0"
             android:clickable="true"
             android:adjustViewBounds="false"
-            android:cropToPadding="false" />
+            android:cropToPadding="false"/>
 
         <ImageButton
             android:layout_width="160dp"
@@ -36,8 +34,6 @@
             android:id="@+id/album2"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="0"
             android:layout_column="1"
             android:clickable="true" />
@@ -49,8 +45,6 @@
             android:id="@+id/album3"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="1"
             android:layout_column="0"
             android:clickable="true" />
@@ -62,8 +56,6 @@
             android:id="@+id/album4"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="1"
             android:layout_column="1"
             android:clickable="true" />
@@ -75,11 +67,9 @@
             android:id="@+id/album5"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="2"
             android:layout_column="0"
-            android:cropToPadding="true"
+            android:cropToPadding="false"
             android:clickable="true" />
 
         <ImageButton
@@ -89,11 +79,9 @@
             android:id="@+id/album6"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="2"
             android:layout_column="1"
-            android:cropToPadding="true"
+            android:cropToPadding="false"
             android:clickable="true" />
 
         <ImageButton
@@ -103,8 +91,6 @@
             android:id="@+id/album7"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="3"
             android:layout_column="0"
             android:clickable="true" />
@@ -116,8 +102,6 @@
             android:id="@+id/album8"
             android:onClick="albumDetails"
             android:scaleType="centerCrop"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
             android:layout_row="3"
             android:layout_column="1"
             android:clickable="true" />
