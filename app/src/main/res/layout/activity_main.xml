@@ -27,7 +27,7 @@
             android:layout_column="0"
             android:clickable="true"
             android:adjustViewBounds="false"
-            android:cropToPadding="true" />
+            android:cropToPadding="false" />
 
         <ImageButton
             android:layout_width="160dp"
