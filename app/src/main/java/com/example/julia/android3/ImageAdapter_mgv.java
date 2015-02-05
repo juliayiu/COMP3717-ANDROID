@@ -18,14 +18,19 @@ public class ImageAdapter_mgv extends BaseAdapter {
     // Keep all Images in array
     public Integer[] mThumbIds = {
             R.drawable.groot,
-            R.drawable.groot, R.drawable.groot,
-            R.drawable.groot, R.drawable.groot,
-            R.drawable.groot, R.drawable.groot,
-            R.drawable.groot, R.drawable.groot,
-            R.drawable.groot, R.drawable.groot,
-            R.drawable.groot, R.drawable.groot,
-            R.drawable.groot, R.drawable.groot,
-            R.drawable.groot
+            R.drawable.sudowoodo,
+            R.drawable.sudowoodo,
+            R.drawable.groot,
+            R.drawable.groot,
+            R.drawable.sudowoodo,
+            R.drawable.sudowoodo,
+            R.drawable.groot,
+            R.drawable.groot,
+            R.drawable.sudowoodo,
+            R.drawable.sudowoodo,
+            R.drawable.groot,
+            R.drawable.groot,
+            R.drawable.sudowoodo
     };
 
     // Constructor
