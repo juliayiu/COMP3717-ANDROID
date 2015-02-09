@@ -2,8 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.julia.android3.PhotoDetails">
-    <item android:id="@+id/add"
-        android:title="@string/add_button_activity_bar" />
+
+    <item android:id="@+id/edit"
+        android:title="@string/edit"
+        android:icon="@drawable/ic_action_edit"
+        app:showAsAction="always" />
 
     <item android:id="@+id/search"
         android:title="@string/action_search"

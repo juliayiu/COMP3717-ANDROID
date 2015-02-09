@@ -16,11 +16,12 @@
         android:id="@+id/photoTitle"
         android:textSize="25dp"
         android:textIsSelectable="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:layout_row="0"
         android:layout_column="0"
-        android:textColor="#ff000000" />
+        android:textColor="#ff000000"
+        android:layout_marginTop="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="200dp"
@@ -36,7 +37,7 @@
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:id="@+id/addPhotoIGCamera"
-        android:src="@drawable/ic_action_camera"
+        android:src="@drawable/ic_action_camera_light"
         android:layout_alignWithParentIfMissing="false"
         android:layout_row="23"
         android:layout_gravity="center_horizontal"
@@ -44,7 +45,7 @@
         android:layout_alignTop="@+id/addPhotoIBGallery"
         android:layout_alignEnd="@+id/photoTitleInput"
         android:layout_marginEnd="22dp"
-        android:background="#d018b3ff"
+        android:background="#000000"
         android:onClick="Camera"/>
 
     <TextView
@@ -57,9 +58,10 @@
         android:textIsSelectable="false"
         android:layout_row="15"
         android:layout_column="0"
-        android:layout_above="@+id/addPhotoIBGallery"
-        android:layout_alignParentStart="true"
-        android:textColor="#ff000000" />
+        android:textColor="#ff000000"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/photoTitle"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,12 +71,12 @@
         android:id="@+id/addPhotoDesc"
         android:textSize="25dp"
         android:textIsSelectable="false"
-        android:layout_above="@+id/addPhotoSubmit"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="124dp"
         android:layout_row="22"
         android:layout_column="0"
-        android:textColor="#ff000000" />
+        android:textColor="#ff000000"
+        android:layout_below="@+id/addPhotoIBGallery"
+        android:layout_toStartOf="@+id/addPhotoDescInput"
+        android:layout_marginTop="39dp" />
 
     <EditText
         android:layout_width="177dp"
@@ -93,28 +95,27 @@
         android:layout_height="wrap_content"
         android:text="Add Photo"
         android:id="@+id/addPhotoSubmit"
-        android:onClick="nextActivity"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/photoTitleInput"
+        android:onClick="homepage"
         android:layout_column="1"
         android:layout_row="24"
         android:layout_gravity="center_horizontal"
-        android:textColor="#ff000000"
-        android:background="#d018b3ff" />
+        android:textColor="#ffffff"
+        android:background="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/photoTitleInput" />
 
 
     <ImageView
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:id="@+id/addPhotoIBGallery"
-        android:src="@drawable/ic_action_new_pictureg"
+        android:src="@drawable/ic_action_new_picture"
         android:layout_column="0"
         android:layout_row="23"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="72dp"
-        android:layout_above="@+id/addPhotoDesc"
-        android:layout_toStartOf="@+id/photoTitleInput"
-        android:background="#d018b3ff"
-        android:onClick="nextActivity"/>
+        android:background="#000000"
+        android:onClick="nextActivity"
+        android:layout_below="@+id/addPhoto"
+        android:layout_toStartOf="@+id/addPhotoDescInput" />
 
 </RelativeLayout>

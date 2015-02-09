@@ -77,19 +77,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void albumPressed(final View view){
-        Toast.makeText(getApplication(), "Yiu pressed on an album", Toast.LENGTH_SHORT).show();
-    }
-
-    public void bottomPressed(final View view){
-        Toast.makeText(getApplication(), "Thanks for pressing me!", Toast.LENGTH_SHORT).show();
-    }
-
-    public void newAlbum(final View view){
-        Toast.makeText(getApplication(), "Add an Album!", Toast.LENGTH_SHORT).show();
-    }
-
-    public void Albums(final View view) {
+    public void addAlbum(final View view) {
         Intent intent = new Intent(MainActivity.this, AddPhoto.class);
         startActivity(intent);
     }

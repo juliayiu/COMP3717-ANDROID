@@ -14,7 +14,7 @@
                 android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/placeholderPhoto1"
-                android:onClick="Albums"
+                android:onClick="albumDetails"
                 android:scaleType="centerCrop"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
@@ -36,7 +36,7 @@
                 android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/imageButton2"
-                android:onClick="Albums"
+                android:onClick="albumDetails"
                 android:scaleType="centerCrop"
                 android:layout_below="@+id/placeholderPhoto1"
                 android:layout_alignParentStart="true" />
@@ -46,7 +46,7 @@
                 android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/imageButton3"
-                android:onClick="Albums"
+                android:onClick="albumDetails"
                 android:scaleType="centerCrop"
                 android:layout_below="@+id/placeholderPhoto1"
                 android:layout_toEndOf="@+id/imageButton2" />
@@ -56,10 +56,19 @@
                 android:layout_height="200dp"
                 android:src="@drawable/groot"
                 android:id="@+id/imageButton4"
-                android:onClick="Albums"
+                android:onClick="albumDetails"
                 android:scaleType="centerCrop"
                 android:layout_below="@+id/imageButton2"
                 android:layout_alignParentStart="true" />
 
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/groot"
+                android:id="@+id/album5"
+                android:onClick="albumDetails"
+                android:scaleType="centerCrop"
+                android:layout_below="@+id/imageButton2"
+                android:layout_alignParentStart="true" />
     </RelativeLayout>
 </ScrollView>
