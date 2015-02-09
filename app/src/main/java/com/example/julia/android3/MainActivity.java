@@ -2,18 +2,22 @@ package com.example.julia.android3;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.app.SearchManager;
 import android.content.Context;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.SearchView;
-
-
 
 
 public class MainActivity extends ActionBarActivity {
@@ -24,11 +28,18 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         handleIntent(getIntent());
+
+        // GridView Settings
+        GridView gridView = (GridView) findViewById(R.id.gridview);
+
+        // Instance of ImageAdapter Class
+        gridView.setAdapter(new ImageAdapter_mgv(this));
     }
 
-    protected void onNewIntent(Intent intent){
+    protected void onNewIntent(Intent intent) {
         handleIntent(intent);
     }
+
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
@@ -49,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
         SearchView searchView =
                 (SearchView) menu.findItem(R.id.search).getActionView();
         //searchView.setSearchableInfo(
-          //      searchManager.getSearchableInfo(getComponentName()));
+        //      searchManager.getSearchableInfo(getComponentName()));
 
         return true;
     }
@@ -67,9 +78,9 @@ public class MainActivity extends ActionBarActivity {
         //}
 
         // When Add Album action menu item is clicked
-        if (id == R.id.addalbum){
+        if (id == R.id.addalbum) {
             // Create Intent for Adding Activity
-            Intent addAlbIntent = new Intent (this, AddAlbum.class);
+            Intent addAlbIntent = new Intent(this, AddAlbum.class);
             // Start Add Album Activity
             startActivity(addAlbIntent);
             return true;

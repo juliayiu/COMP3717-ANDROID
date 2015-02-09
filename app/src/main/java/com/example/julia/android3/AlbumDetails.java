@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.widget.GridView;
 
 
 public class AlbumDetails extends ActionBarActivity {
@@ -16,6 +17,12 @@ public class AlbumDetails extends ActionBarActivity {
         setContentView(R.layout.activity_album_details);
 
         //handleIntent(getIntent());
+
+        // GridView Settings
+        GridView gridView = (GridView) findViewById(R.id.gridview);
+
+        // Instance of ImageAdapter Class
+        gridView.setAdapter(new ImageAdapter_adgv(this));
     }
 
     @Override

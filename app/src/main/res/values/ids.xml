@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="ImageView01" type="id" />
+    <item name="picture" type="id" />
+    <item name="text" type="id" />
+    <item name="grid_view" type="id" />
 </resources>
