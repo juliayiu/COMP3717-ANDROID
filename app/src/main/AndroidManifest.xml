@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.julia.android3" >
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -29,16 +31,8 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".AddAlbum"
-            android:label="@string/action_add_album" >
-        </activity>
-        <activity
             android:name=".AddPhoto"
             android:label="@string/title_activity_add_photo" >
-        </activity>
-        <activity
-            android:name=".AlbumDetails"
-            android:label="@string/title_activity_album_details" >
         </activity>
         <activity
             android:name=".PhotoDetails"

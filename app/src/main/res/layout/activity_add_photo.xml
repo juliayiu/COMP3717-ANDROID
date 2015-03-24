@@ -1,121 +1,92 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.julia.android3.AddPhoto"
-    android:id="@+id/x"
-    android:background="#ffffff">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="false"
+    android:id="@+id/x">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Photo Title: "
-        android:id="@+id/photoTitle"
-        android:textSize="25dp"
-        android:textIsSelectable="false"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:textColor="#ff000000"
-        android:layout_marginTop="53dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/photoTitleInput"
-        android:layout_alignBottom="@+id/photoTitle"
-        android:layout_toEndOf="@+id/photoTitle"
-        android:layout_row="0"
-        android:layout_column="1"
-        android:textColor="#d0ff9e00" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Photo Title: "
+            android:id="@+id/photoTitle"
+            android:textSize="18dp"
+            android:textIsSelectable="false"
+            android:textColor="#ff000000"
+            android:layout_marginTop="20dp" />
 
-    <ImageView
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:id="@+id/addPhotoIGCamera"
-        android:src="@drawable/ic_action_camera_light"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_row="23"
-        android:layout_gravity="center_horizontal"
-        android:layout_column="1"
-        android:layout_alignTop="@+id/addPhotoIBGallery"
-        android:layout_alignEnd="@+id/photoTitleInput"
-        android:layout_marginEnd="22dp"
-        android:background="#000000"
-        android:onClick="Camera"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Add Photo: "
-        android:id="@+id/addPhoto"
-        android:textSize="25dp"
-        android:textIsSelectable="false"
-        android:layout_row="15"
-        android:layout_column="0"
-        android:textColor="#ff000000"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/photoTitle"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Description:"
-        android:id="@+id/addPhotoDesc"
-        android:textSize="25dp"
-        android:textIsSelectable="false"
-        android:layout_row="22"
-        android:layout_column="0"
-        android:textColor="#ff000000"
-        android:layout_below="@+id/addPhotoIBGallery"
-        android:layout_toStartOf="@+id/addPhotoDescInput"
-        android:layout_marginTop="39dp" />
-
-    <EditText
-        android:layout_width="177dp"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:id="@+id/addPhotoDescInput"
-        android:lines="1"
-        android:layout_row="22"
-        android:layout_column="1"
-        android:layout_alignTop="@+id/addPhotoDesc"
-        android:layout_alignEnd="@+id/addPhotoIGCamera"
-        android:textColor="#ff000000" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Photo"
-        android:id="@+id/addPhotoSubmit"
-        android:onClick="homepage"
-        android:layout_column="1"
-        android:layout_row="24"
-        android:layout_gravity="center_horizontal"
-        android:textColor="#ffffff"
-        android:background="#000000"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/photoTitleInput" />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleInput"
+            android:textColor="#ff000000"
+            android:layout_gravity="center_horizontal" />
 
 
-    <ImageView
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:id="@+id/addPhotoIBGallery"
-        android:src="@drawable/ic_action_new_picture"
-        android:layout_column="0"
-        android:layout_row="23"
-        android:layout_gravity="center_horizontal"
-        android:background="#000000"
-        android:onClick="nextActivity"
-        android:layout_below="@+id/addPhoto"
-        android:layout_toStartOf="@+id/addPhotoDescInput" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Photo"
+            android:id="@+id/addPhoto"
+            android:layout_marginTop="33dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#ff91d1e2"
+            android:padding="10dp" />
 
-</RelativeLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_marginTop="48dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description:"
+            android:id="@+id/addPhotoDesc"
+            android:textSize="18dp"
+            android:textIsSelectable="false"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:id="@+id/photoDesc"
+            android:maxLength="2000"
+            android:maxLines="5"
+            android:textColor="#ff000000"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Photo"
+            android:id="@+id/addPhotoSubmit"
+            android:layout_gravity="right"
+            android:textColor="#ff000000"
+            android:background="#ff91d1e2"
+            android:onClick="addToDb"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</ScrollView>
+

@@ -1,27 +1,19 @@
 package com.example.julia.android3;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.AttributeSet;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Toast;
-import android.app.SearchManager;
-import android.content.Context;
-import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.widget.SearchView;
 
 
 public class MainActivity extends ActionBarActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +26,7 @@ public class MainActivity extends ActionBarActivity {
 
         // Instance of ImageAdapter Class
         gridView.setAdapter(new ImageAdapter_mgv(this));
+
     }
 
     protected void onNewIntent(Intent intent) {
@@ -80,8 +73,8 @@ public class MainActivity extends ActionBarActivity {
         // When Add Album action menu item is clicked
         if (id == R.id.addalbum) {
             // Create Intent for Adding Activity
-            Intent addAlbIntent = new Intent(this, AddAlbum.class);
-            // Start Add Album Activity
+            Intent addAlbIntent = new Intent(this, AddPhoto.class);
+            // Start Add Album Activitys
             startActivity(addAlbIntent);
             return true;
         }
@@ -94,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void albumDetails(final View view) {
-        Intent intent = new Intent(MainActivity.this, AlbumDetails.class);
+        Intent intent = new Intent(MainActivity.this, PhotoDetails.class);
         startActivity(intent);
     }
 }

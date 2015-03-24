@@ -66,7 +66,7 @@ public class ImageAdapter_mgv extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(v.getContext(), AlbumDetails.class);
+                intent = new Intent(v.getContext(), PhotoDetails.class);
                 mContext.startActivity(intent);
             }
         });
