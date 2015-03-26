@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.julia.android3.PhotoDetails">
 
+    <item android:id="@+id/logo"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="always"
+        android:title="@string/logo"
+        android:layout_gravity="left" />
+
     <item android:id="@+id/edit"
         android:title="@string/edit"
         android:icon="@drawable/ic_action_edit"
