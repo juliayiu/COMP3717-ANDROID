@@ -242,18 +242,24 @@ public class AddPhoto extends ActionBarActivity {
 
     public void addToDb(View view){
         EditText title = (EditText)findViewById(R.id.titleInput);
-        ImageView image = (ImageView)findViewById(R.id.imageView);
+        //ImageView image = (ImageView)findViewById(R.id.imageView);
         EditText desc = (EditText)findViewById(R.id.photoDesc);
-        TextView box1 = (TextView)findViewById(R.id.textView);
+        //TextView box1 = (TextView)findViewById(R.id.textView);
 
         titleVal = title.getText().toString();
         descVal = desc.getText().toString();
 
         PhotoData photo = photosource.addPic(titleVal, picVal, descVal);
-        box1.setText("The image path after picking a image: " + picVal);
+        //box1.setText("The image path after picking a image: " + picVal);
         //title.setText(photo.getTitle());
         //image.setText(photo.getImage());
         //desc.setText(photo.getDesc());
-        Toast.makeText(this, photo.getTitle() + ' ' + photo.getImage() + ' ' + photo.getDesc(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Photo added!", Toast.LENGTH_SHORT).show();
+        redirect(view);
+    }
+
+    public void redirect(final View view) {
+        Intent intent = new Intent(AddPhoto.this, AddPhoto.class);
+        startActivity(intent);
     }
 }
