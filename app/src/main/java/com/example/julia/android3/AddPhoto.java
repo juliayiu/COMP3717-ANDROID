@@ -44,6 +44,10 @@ public class AddPhoto extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_photo);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         mImage = (ImageView) findViewById(R.id.addPhoto);
 
         ((ImageView)findViewById(R.id.addPhoto)).setOnClickListener(new View.OnClickListener() {
@@ -167,8 +171,6 @@ public class AddPhoto extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_add_album, menu);
         return true;
     }
 

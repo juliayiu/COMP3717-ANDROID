@@ -14,6 +14,10 @@ public class PhotoDetails extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_details);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        
         // View Pager
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
         ImageAdapter adapter = new ImageAdapter(this);

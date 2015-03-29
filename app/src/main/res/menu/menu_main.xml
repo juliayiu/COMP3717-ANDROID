@@ -4,8 +4,7 @@
 
     <activity
         android:name=".MyActivity"
-        android:icon="@drawable/ic_launcher"
-        android:label="My new title" />
+        android:icon="@drawable/ic_launcher" />
 
     <item android:id="@+id/addalbum"
         android:title="@string/action_add_album"

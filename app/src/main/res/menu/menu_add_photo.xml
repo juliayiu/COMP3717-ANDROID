@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.julia.android3.AddPhoto">
     <activity
-        android:name=".MyActivity"
-        android:icon="@drawable/ic_launcher"
-        android:label="My new title" />
+        android:name=".addPhoto"
+        android:icon="@drawable/ic_launcher" />
 </menu>
