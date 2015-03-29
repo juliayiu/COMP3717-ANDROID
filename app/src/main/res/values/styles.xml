@@ -1,8 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="Theme.Light" parent="@style/Theme.AppCompat">
+        <item name="actionBarItemBackground">@drawable/selectable_background_</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_</item>
     </style>
+
+    <style name="ActionBar.Solid." parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@color/bgColor</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme..Widget" parent="@style/Theme.AppCompat"></style>
 
 </resources>

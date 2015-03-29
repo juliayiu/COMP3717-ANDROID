@@ -1,92 +1,109 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:fillViewport="false"
-    android:id="@+id/x">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:id="@+id/addPhoto"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/placeholder"
+        android:layout_marginTop="25dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Photo Title: "
-            android:id="@+id/photoTitle"
-            android:textSize="18dp"
-            android:textIsSelectable="false"
-            android:textColor="#ff000000"
-            android:layout_marginTop="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Photo Title: "
+        android:id="@+id/photoTitle"
+        android:textSize="18dp"
+        android:textIsSelectable="false"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp" />
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/titleInput"
-            android:textColor="#ff000000"
-            android:layout_gravity="center_horizontal" />
+    <EditText
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleInput"
+        android:textColor="#ff000000"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_edittext" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Description:"
+        android:id="@+id/addPhotoDesc"
+        android:textSize="18dp"
+        android:textIsSelectable="false"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/photoDesc"
+        android:maxLength="2000"
+        android:maxLines="5"
+        android:textColor="#ff000000"
+        android:background="@drawable/round_edittext"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
 
         <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose Photo"
-            android:id="@+id/addPhoto"
-            android:layout_marginTop="33dp"
-            android:layout_gravity="center_horizontal"
-            android:background="#ff91d1e2"
-            android:padding="10dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:layout_marginTop="48dp"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Description:"
-            android:id="@+id/addPhotoDesc"
-            android:textSize="18dp"
-            android:textIsSelectable="false"
-            android:textColor="#ff000000" />
-
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:id="@+id/photoDesc"
-            android:maxLength="2000"
-            android:maxLines="5"
-            android:textColor="#ff000000"
-            android:layout_gravity="center_horizontal" />
-
-        <Button
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Add Photo"
             android:id="@+id/addPhotoSubmit"
-            android:layout_gravity="right"
             android:textColor="#ff000000"
-            android:background="#ff91d1e2"
             android:onClick="addToDb"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:background="@drawable/button_border"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal" />
+            android:text="Cancel"
+            android:id="@+id/cancelButton"
+            android:onClick="cancelAdd"
+            android:background="@drawable/button_border"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:elegantTextHeight="false"
+            android:textColor="#000000" />
+    </TableRow>
 
-    </LinearLayout>
-</ScrollView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_marginTop="48dp"
+        android:layout_gravity="center_horizontal" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

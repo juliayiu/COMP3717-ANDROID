@@ -2,19 +2,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.julia.android3.AlbumDetails">
-
-    <item android:id="@+id/logo"
+    <activity
+        android:name=".MyActivity"
         android:icon="@drawable/ic_launcher"
-        app:showAsAction="always"
-        android:title="@string/logo"
-        android:layout_gravity="left" />
-
-    <item android:id="@+id/addalbum"
+        android:label="My new title" />
+    <item
+        android:id="@+id/addalbum"
         android:title="@string/action_add_album"
         android:icon="@drawable/ic_action_new_picture"
         app:showAsAction="always" />
 
-    <item android:id="@+id/search"
+    <item
+        android:id="@+id/search"
         android:title="@string/action_search"
         android:icon="@drawable/ic_action_search"
         app:showAsAction="always"

@@ -1,8 +1,11 @@
 package com.example.julia.android3;
 
+import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
@@ -19,6 +22,10 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         handleIntent(getIntent());
 
         // GridView Settings
@@ -26,7 +33,6 @@ public class MainActivity extends ActionBarActivity {
 
         // Instance of ImageAdapter Class
         gridView.setAdapter(new ImageAdapter_mgv(this));
-
     }
 
     protected void onNewIntent(Intent intent) {

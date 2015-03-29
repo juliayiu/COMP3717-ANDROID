@@ -1,10 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context="com.example.julia.android3.AddAlbum">
-
-    <item android:id="@+id/logo"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.julia.android3.AddAlbum">
+    <activity
+        android:name=".MyActivity"
         android:icon="@drawable/ic_launcher"
-        app:showAsAction="always"
-        android:title="@string/logo"
-        android:layout_gravity="left" />
+        android:label="My new title" />
 </menu>

@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,9 +44,9 @@ public class AddPhoto extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_photo);
 
-        mImage = (ImageView) findViewById(R.id.imageView);
+        mImage = (ImageView) findViewById(R.id.addPhoto);
 
-        ((Button)findViewById(R.id.addPhoto)).setOnClickListener(new View.OnClickListener() {
+        ((ImageView)findViewById(R.id.addPhoto)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectImage();
@@ -58,6 +59,11 @@ public class AddPhoto extends ActionBarActivity {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void cancelAdd(final View view) {
+        Intent intent = new Intent(AddPhoto.this, MainActivity.class);
+        startActivity(intent);
     }
 
     //Displays a dialog box with Take Photo, Choose from Library, and Cancel as the options
@@ -243,6 +249,6 @@ public class AddPhoto extends ActionBarActivity {
         //title.setText(photo.getTitle());
         //image.setText(photo.getImage());
         //desc.setText(photo.getDesc());
-        Toast.makeText(this, photo.getTitle() + ' ' + photo.getImage() + ' ' + photo.getDesc(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, photo.getTitle() + ' ' + photo.getImage() + ' ' + photo.getDesc(), Toast.LENGTH_SHORT).show();
     }
 }
