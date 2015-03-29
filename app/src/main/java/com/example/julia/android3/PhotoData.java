@@ -27,7 +27,6 @@ public class PhotoData {
 
     public String getDesc() {
         return desc;
-
     }
 
     public void setDesc(String desc) {
@@ -44,6 +43,6 @@ public class PhotoData {
 
     @Override
     public String toString(){
-        return title + image + desc;
+        return  "Photo title: " + title + "\n\nFile path: " + image + "\n\nPhoto Description: " + desc;
     }
 }

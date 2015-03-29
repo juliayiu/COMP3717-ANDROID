@@ -13,6 +13,7 @@
     <string name="title_activity_album_details">AlbumDetails</string>
     <string name="title_activity_photo_details">PhotoDetails</string>
     <string name="add_button_activity_bar">Add!</string>
+    <string name="show_db">Database</string>
     <string name="edit" />
     <string name="logo" />
 

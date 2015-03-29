@@ -39,6 +39,10 @@
             android:name=".PhotoDetails"
             android:label="@string/title_activity_photo_details" >
         </activity>
+        <activity
+            android:name=".ShowDB"
+            android:label="@string/show_db" >
+        </activity>
     </application>
 
 </manifest>

@@ -77,11 +77,15 @@ public class MainActivity extends ActionBarActivity {
         //}
 
         // When Add Album action menu item is clicked
-        if (id == R.id.addalbum) {
+        if ( id == R.id.addalbum ) {
             // Create Intent for Adding Activity
             Intent addAlbIntent = new Intent(this, AddPhoto.class);
             // Start Add Album Activitys
             startActivity(addAlbIntent);
+            return true;
+        } else if( id == R.id.search ) {
+            Intent showDB = new Intent(this, ShowDB.class);
+            startActivity(showDB);
             return true;
         }
         return super.onOptionsItemSelected(item);
