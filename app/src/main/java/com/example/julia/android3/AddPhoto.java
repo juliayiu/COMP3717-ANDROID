@@ -255,11 +255,6 @@ public class AddPhoto extends ActionBarActivity {
         //image.setText(photo.getImage());
         //desc.setText(photo.getDesc());
         Toast.makeText(this, "Photo added!", Toast.LENGTH_SHORT).show();
-        redirect(view);
-    }
-
-    public void redirect(final View view) {
-        Intent intent = new Intent(AddPhoto.this, AddPhoto.class);
-        startActivity(intent);
+        cancelAdd(view);
     }
 }

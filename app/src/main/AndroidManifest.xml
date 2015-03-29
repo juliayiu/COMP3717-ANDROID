@@ -33,7 +33,8 @@
         </activity>
         <activity
             android:name=".AddPhoto"
-            android:label="@string/title_activity_add_photo" >
+            android:label="@string/title_activity_add_photo"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".PhotoDetails"
