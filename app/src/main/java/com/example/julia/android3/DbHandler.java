@@ -16,7 +16,7 @@ public class DbHandler extends SQLiteOpenHelper {
     public Context context;
     private static final String CREATE_TABLE  = " CREATE TABLE " + TABLE_NAME +  " (" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + TITLE + " VARCHAR(100),"
-            + IMAGE + " BLOB,"
+            + IMAGE + " TEXT,"
             + DESC + " VARCHAR(255));";
     private static final String DROP_TABLE    = "DROP TABLE IF EXISTS " + TABLE_NAME;
 

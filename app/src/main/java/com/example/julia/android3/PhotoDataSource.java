@@ -77,5 +77,50 @@ public class PhotoDataSource {
         photo.setDesc(cursor.getString(3));
         return photo;
     }
+
+    public List<String> getPaths() {
+        List<String> pathList = new ArrayList<String>();
+        String[] pathColumn = {DbHandler.IMAGE};
+        Cursor cursor = db.query(DbHandler.TABLE_NAME, pathColumn, null, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()){
+            String photoPath = cursorToString(cursor);
+            pathList.add(photoPath);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return pathList;
+    }
+
+    public List<String> getTitle() {
+        List<String> titleList = new ArrayList<String>();
+        String[] pathColumn = {DbHandler.IMAGE};
+        Cursor cursor = db.query(DbHandler.TABLE_NAME, pathColumn, null, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()){
+            String photoPath = cursorToTitle(cursor);
+            titleList.add(photoPath);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return titleList;
+    }
+
+    private String cursorToTitle(Cursor cursor){
+        String path = new String();
+        path = cursor.getString(cursor.getColumnIndex(DbHandler.TITLE));
+        return path;
+    }
+
+    private String cursorToString(Cursor cursor){
+        String path = new String();
+        path = cursor.getString(cursor.getColumnIndex(DbHandler.IMAGE));
+        return path;
+    }
+
 }
 
