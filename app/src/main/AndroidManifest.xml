@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.julia.android3" >
+
+    <uses-sdk android:minSdkVersion="11" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-sdk android:minSdkVersion="11" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +39,7 @@
         <activity
             android:name=".AddPhoto"
             android:label="@string/title_activity_add_photo"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".PhotoDetails"
@@ -43,6 +48,10 @@
         <activity
             android:name=".ShowDB"
             android:label="@string/show_db" >
+        </activity>
+        <activity
+            android:name=".DBDetails"
+            android:label="@string/title_activity_dbdetails" >
         </activity>
     </application>
 

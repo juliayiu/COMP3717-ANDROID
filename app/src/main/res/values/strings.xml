@@ -16,5 +16,6 @@
     <string name="show_db">Database</string>
     <string name="edit" />
     <string name="logo" />
+    <string name="title_activity_dbdetails">DBDetails</string>
 
 </resources>

@@ -2,6 +2,7 @@ package com.example.julia.android3;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ import java.util.List;
  * Created by Lawrence on 2015-03-29.
  */
 public class ShowDB extends ListActivity{
-
+    public static PhotoData pd;
     private Context             myCon;
     private PhotoDataSource     pds;
     private PhotoData           db;
@@ -49,14 +50,16 @@ public class ShowDB extends ListActivity{
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        //Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_LONG).show();
-        TextView x = (TextView)findViewById(android.R.id.text1);
 
-            String test = x.getText().toString();
-
-        Bitmap bm = BitmapFactory.decodeFile(test);
+        pd = (PhotoData)getListView().getItemAtPosition(position);
+/*
+        Bitmap bm = BitmapFactory.decodeFile(test.getImage());
         ImageView iv = (ImageView)findViewById(R.id.imageView);
-        iv.setImageBitmap(bm);
+        iv.setImageBitmap(bm);*/
+
+        Intent i = new Intent(this, DBDetails.class);
+        startActivity(i);
+
     }
 
     @Override

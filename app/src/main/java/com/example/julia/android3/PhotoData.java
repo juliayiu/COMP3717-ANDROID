@@ -43,6 +43,6 @@ public class PhotoData {
 
     @Override
     public String toString(){
-        return  image;
+        return  "Title: " + title + "\n\nFile Path: " + image + "\n\nDesc: " + desc;
     }
 }
